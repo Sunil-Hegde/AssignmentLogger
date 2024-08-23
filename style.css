@@ -1,0 +1,58 @@
+body::-webkit-scrollbar {
+    width: .4em;
+}
+   
+body::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, rgba(0,0,0,1));
+}
+   
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(85, 84, 84);
+    outline: 1px solid slategrey;
+    border-radius: 15px;
+    margin: 2px;
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+table, th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+table tr{
+    font-size: large;
+}
+
+#csvTable{
+    height: 50vh;
+    width: 100%;
+    overflow: auto;
+    margin-top: 50px;
+}
+
+#nonSubmitters{
+    height: 50vh;
+    width: 100%;
+    overflow: auto;
+}
+
+#nonSubmittersButton{
+    margin: 10px;
+}
+
+#availableList{
+    margin: 1rem;
+}
+
+#subjectsList ul{
+    margin: 0;
+    list-style: none
+}
+
+#availableList h3{
+    margin: 0;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="availableList">
+        <h3>Available assignment submissions in database:</h3>
+        <div id="subjectsList"></div>
+    </div>
+    <input type="file" id="csvFileInput" accept=".csv"/>
+    <input type="text" id="subject">
+    <button id="submitButton">Submit</button><br><br>
+    <h1 id="subjectHeading"></h1>
+    <input type="input" id="searchInput" placeholder="Search name" list="nameSearch"/>
+    <datalist id="nameSearch"></datalist>
+    <button id="markAsSubmittedButton">Mark As Submitted</button>
+    <div id="csvTable"></div>
+    <button id="displayNonSubmittersButton">Display Non-Submitters</button>
+    <div id="nonSubmitters"></div>
+    <button id="saveCSVButton">Save CSV to Firestore</button>
+    <!-- Use module script -->
+    <script type="module">
+        import { markAsSubmitted, displayNonSubmitters, displaySubjectName} from './script.js';
+        
+        // Add event listeners
+        document.getElementById('submitButton').addEventListener('click', displaySubjectName);
+        document.getElementById('markAsSubmittedButton').addEventListener('click', markAsSubmitted);
+        document.getElementById('displayNonSubmittersButton').addEventListener('click', displayNonSubmitters);
+    </script>
+</body>
+</html>
