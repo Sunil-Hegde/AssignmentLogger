@@ -137,7 +137,7 @@ function saveCSVToStorage() {
     console.log('Uploading CSV data...');
     uploadString(fileRef, csvData)
         .then(() => {
-            console.log('CSV file uploaded successfully!');
+            alert('CSV file uploaded successfully!');
             return getDownloadURL(fileRef);
         })
         .then((url) => {
@@ -145,7 +145,7 @@ function saveCSVToStorage() {
             saveFileUrlToFirestore(subName, url);
         })
         .catch((error) => {
-            console.error('Error uploading CSV file:', error.message);
+            console.log('Error uploading CSV file:', error.message);
             console.error('Error code:', error.code);
             console.error('Error details:', error);
         });

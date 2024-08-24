@@ -13,6 +13,12 @@ body::-webkit-scrollbar-thumb {
     margin: 2px;
 }
 
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #f3f8f4;
+}
+
 table {
     border-collapse: collapse;
     margin-top: 20px;
