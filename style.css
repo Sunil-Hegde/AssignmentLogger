@@ -29,14 +29,13 @@ table tr{
 
 #csvTable{
     height: 50vh;
-    width: 100%;
+    width: 50vw;
     overflow: auto;
     margin-top: 50px;
 }
 
 #nonSubmitters{
     height: 50vh;
-    width: 100%;
     overflow: auto;
 }
 
@@ -55,4 +54,55 @@ table tr{
 
 #availableList h3{
     margin: 0;
+}
+
+#topBox{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height: 10vh;
+}
+
+#inputBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+}
+
+.firstBox{
+    display: flex;
+    justify-content: space-evenly;
+}
+.secondBox{
+    height: 150px;
+}
+
+#displayBox{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@media only screen and (width < 640px) {
+    #inputBox{
+        margin: 0;
+    }
+    .firstBox{
+        flex-direction: column;
+    }
+    .thirdBox{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    #displayBox{
+        flex-direction: column;
+        align-items: center;
+    }
+    #csvTable{
+        width: 100%;
+        margin-bottom: 10vh;
+    }
+    #nonSubmitters{
+        margin: 5vh;
+    }
 }
